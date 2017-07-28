@@ -1,1 +1,0 @@
-<? require_once "app/core.php"; ?><!DOCTYPE html>
