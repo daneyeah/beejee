@@ -1,0 +1,38 @@
+{
+  "name": "beejee",
+  "version": "1.0.0",
+  "description": "beejee vacancy",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daneyeah/beejee.git"
+  },
+  "keywords": [
+    "vacancy"
+  ],
+  "author": "dane.yeah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daneyeah/beejee/issues"
+  },
+  "homepage": "https://github.com/daneyeah/beejee#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-csso": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1"
+  }
+}

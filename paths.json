@@ -1,0 +1,35 @@
+{
+  "public": {
+    "primary":"public/",
+    "css": "public/assets/css/",
+    "fonts_css": "public/assets/css/font-awesome/",
+    "bootstrap_css": "public/assets/css/bootstrap/",
+    "js": "public/assets/js/",
+    "js_lib": "public/assets/js/lib/",
+    "fonts": "public/assets/fonts/",
+    "images": "public/assets/images/"
+  },
+  "dist": {
+    "bootstrap": "sources/assets/css/bootstrap/",
+    "css":"sources/assets/css/",
+    "fonts_css":"sources/assets/css/font-awesome/"
+  },
+  "sources": {
+    "bootstrap": "sources/assets/less/bootstrap/bootstrap.less",
+    "bootstrap_css": "sources/assets/css/bootstrap/*.css",
+    "css": "sources/assets/css/*.css",
+    "fonts": "sources/assets/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
+    "fonts_css":"sources/assets/css/font-awesome/*.css",
+    "fonts_less": "sources/assets/less/font-awesome/font-awesome.less",
+    "htaccess": "sources/.htacess",
+    "images": "sources/assets/images/*.{jpeg,jpg,gif,png}",
+    "less": "sources/assets/less/*.less",
+    "less_ignore":"!sources/assets/less/__*.less",
+    "js": "sources/assets/js/*.js",
+    "js_lib": "sources/assets/js/lib/*.js",
+    "json": "sources/**/*.json",
+    "php": "sources/**/*.php",
+    "pug": "sources/**/*.pug"
+  }
+
+}
