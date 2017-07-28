@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     });
 var pathFile = require('fs'),
     paths = JSON.parse(pathFile.readFileSync('./paths.json'));
-
 gulp.task('pug', function () {
    return gulp
        .src(paths.sources.pug)
@@ -52,7 +51,6 @@ gulp.task('css',function () {
        .pipe($.csso())
        .pipe($.sourcemaps.write('.'))
        .pipe(gulp.dest(paths.public.css))
-
 });
 gulp.task('fonts',function () {
     return gulp
@@ -93,9 +91,43 @@ gulp.task('bootstrap_css', function () {
         .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest(paths.public.bootstrap_css))
 });
+gulp.task('htaccess', function () {
+    return gulp
+        .src(paths.sources.htaccess)
+        .pipe(gulp.dest(paths.public.primary))
+});
 gulp.task('images', function () {
-
+    return gulp
+        .src(paths.sources.images)
+        .pipe($.cache($.imagemin({use: [$.imageminPngquant()]})))
+        .pipe(gulp.dest(paths.public.images))
+});
+gulp.task('cleaner',function () {
+    return gulp
+        .src([paths.dist.app,paths.dist.assets,paths.dist.index,paths.dist.htaccess,paths.dist.storage_css], {read: true})
+        .pipe($.clean())
+});
+gulp.task('build:styles',function () {
+    $.runSequence('less','css');
+});
+gulp.task('build:fonts',function () {
+    $.runSequence('fonts_less','fonts_css');
+});
+gulp.task('build:bootstrap',function () {
+    $.runSequence('bootstrap_less','bootstrap_css');
+});
+gulp.task('builder',function () {
+    $.runSequence('fonts','images','htaccess','json','js_lib','js','php','build:styles','build:fonts','build:bootstrap','pug')
+});
+gulp.task('watcher',function () {
+    gulp.watch(paths.sources.pug,['pug']);
+    gulp.watch(paths.sources.js,['js']);
+    gulp.watch(paths.sources.less,['build:styles']);
+    gulp.watch(paths.sources.php,['php']);
+    gulp.watch(paths.sources.json,['json']);
+    gulp.watch(paths.sources.htaccess,['htaccess']);
+    gulp.watch(paths.sources.images,['images']);
 });
 gulp.task('default', function () {
-
+    $.runSequence('cleaner','builder','watcher');
 });

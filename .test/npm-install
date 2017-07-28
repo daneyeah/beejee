@@ -1,0 +1,6 @@
+npm i -D
+    bootstrap font-awesome gulp gulp-autoprefixer
+    gulp-cache gulp-clean gulp-concat gulp-csscomb
+    gulp-csso gulp-imagemin gulp-less gulp-load-plugins
+    gulp-pug gulp-rename gulp-run-sequence gulp-sourcemaps
+    gulp-uglify gulp-watch imagemin-pngquant jquery

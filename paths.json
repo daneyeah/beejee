@@ -10,6 +10,11 @@
     "images": "public/assets/images/"
   },
   "dist": {
+    "app":"public/assets/*",
+    "assets":"public/app/*",
+    "index": "public/index.php",
+    "htaccess": "public/.htaccess",
+    "storage_css": "sources/assets/css/*",
     "bootstrap": "sources/assets/css/bootstrap/",
     "css":"sources/assets/css/",
     "fonts_css":"sources/assets/css/font-awesome/"
@@ -21,8 +26,8 @@
     "fonts": "sources/assets/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}",
     "fonts_css":"sources/assets/css/font-awesome/*.css",
     "fonts_less": "sources/assets/less/font-awesome/font-awesome.less",
-    "htaccess": "sources/.htacess",
-    "images": "sources/assets/images/*.{jpeg,jpg,gif,png}",
+    "htaccess": "sources/.htaccess",
+    "images": "sources/assets/images/**/*.{jpeg,jpg,gif,png}",
     "less": "sources/assets/less/*.less",
     "less_ignore":"!sources/assets/less/__*.less",
     "js": "sources/assets/js/*.js",

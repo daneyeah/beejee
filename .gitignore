@@ -6,3 +6,4 @@ gen
 # project files
 node_modules
 *.map
+public
